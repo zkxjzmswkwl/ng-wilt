@@ -1,5 +1,11 @@
 # Wilt
 
+This frontend interfaces with [this backend](https://github.com/zkxjzmswkwl/django-wilt)
+
+
+
+# Auto-gen'd readme below
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
 
 ## Development server
