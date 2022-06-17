@@ -1,0 +1,24 @@
+.header {
+    width: 100%;
+    height: 3rem;
+    background-color: #f85151;
+    margin-bottom: 1rem;
+
+    .content {
+        padding: .3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "left right";
+
+        .left {
+            grid-area: left;
+            margin-right: auto;
+        }
+
+        .right {
+            margin-left: auto;
+            justify-content: flex-end;
+            grid-area: right;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<div class="home-grid">
+    <!-- Left, tall -->
+    <div class="grid-item new-inserts">
+
+        <div *ngFor="let scrobble of recentScrobbles" class="scrobble-small">
+            <div class="scrobble-small-text">{{scrobble.song | slice:0:30}}...</div>
+        </div>
+
+    </div>
+
+    <!-- Center, tall, wide -->
+    <div class="grid-item feed">
+        <p>I am gay</p>
+    </div>
+
+    <!-- Right, tall -->
+    <div class="grid-item repo-updates">
+        <p>I am gay</p>
+    </div>
+</div>

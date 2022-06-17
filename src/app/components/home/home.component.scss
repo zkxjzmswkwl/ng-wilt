@@ -1,0 +1,39 @@
+.home-grid {
+    margin: 0 auto;
+    width: 75%;
+    height: 80%;
+
+    display: grid;
+    grid-template-areas:
+        "new-inserts feed repo-updates"
+        "new-inserts feed repo-updates";
+    
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.grid-item {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+
+.new-inserts {
+    grid-area: new-inserts;
+    height: 100%;
+}
+
+.feed {
+    height: 100%;
+    grid-area: feed;
+}
+
+.repo-updates {
+    grid-area: repo-updates;
+    height: 100%;
+}
+.scrobble-small {
+    font-size: 9px;
+    margin-bottom: .1rem;
+    margin-top: .1rem;
+    max-width: 150px;
+    margin-left: auto;
+}

@@ -1,0 +1,15 @@
+<div class="header">
+    <div class="content">
+
+        <div class="left">
+            <h4 class="hover" id="header-label" [routerLink]="['/']">MorbFM</h4>
+        </div>
+
+        <div class="right">
+            <h4 *ngIf="!auth.getUser()" class="hover" [routerLink]="['login']">Login</h4>
+            <h4 *ngIf="!auth.getUser()" class="hover" [routerLink]="['register']">Register</h4>
+            <h4 *ngIf="auth.getUser()" class="hover">Profile</h4>
+        </div>
+
+    </div>
+</div>
