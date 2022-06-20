@@ -1,0 +1,21 @@
+<div class="artist-profile">
+    <div class="artist-profile-header">
+
+        <div class="a-picture a-grid-item">
+            <img class="artist-cover" src="http://localhost:6969{{artist.pic}}">
+        </div>
+
+        <div class="a-grid-item a-name">
+            <h4>{{artist.title}}</h4>
+            <p>Scrobble count: {{scrobbleCount.count | number}}</p>
+            <p>First scrobbled: {{artist.creation_timestamp | date}}</p>
+        </div>
+
+        <div class="a-grid-item a-recents">
+            <div *ngFor="let s of recentScrobbles">
+                <app-small-scrobble [scrobbleData]="s" [songOnly]="true"></app-small-scrobble>
+            </div>
+        </div>
+
+    </div>
+</div>

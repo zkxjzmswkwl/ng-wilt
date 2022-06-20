@@ -8,7 +8,7 @@
         <div class="right">
             <h4 *ngIf="!auth.getUser()" class="hover" [routerLink]="['login']">Login</h4>
             <h4 *ngIf="!auth.getUser()" class="hover" [routerLink]="['register']">Register</h4>
-            <h4 *ngIf="auth.getUser()" class="hover">Profile</h4>
+            <h4 *ngIf="auth.getUser()" class="hover" [routerLink]="['profile', auth.getUser().username]">Profile</h4>
         </div>
 
     </div>

@@ -1,0 +1,29 @@
+.artist-profile {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+    &-header {
+        display: grid;
+        grid-template-areas:
+            "picture name recents";
+        
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+}
+
+.a-grid-item {
+    padding: .2rem;
+}
+
+.a-picture {
+    grid-area: picture;
+}
+
+.a-name {
+    grid-area: name;
+}
+
+.artist-cover {
+    max-width: 280px;
+}

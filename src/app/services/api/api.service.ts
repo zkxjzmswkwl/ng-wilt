@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable } from 'rxjs/internal/Observable';
-import { IScrobble, IToken } from 'src/app/models';
+import { IArtist, ICount, IScrobble, IToken } from 'src/app/models';
 
 @Injectable({
   providedIn: 'root'
@@ -25,10 +25,22 @@ export class ApiService {
   }
 
   getXRecentScrobbles(x: number): Observable<IScrobble[]> { 
-    return this.httpClient.get<IScrobble[]>(`${this.apiUrl}/scrobbles/recent?count=${x}`);
+    return this.httpClient.get<IScrobble[]>(`${this.apiUrl}/scrobbles/recent/?count=${x}`);
   }
 
   getScrobblesByUser(username: number): Observable<IScrobble[]> {
-    return this.httpClient.get<IScrobble[]>(`${this.apiUrl}/scrobbles/by_user?username=${username}`);
+    return this.httpClient.get<IScrobble[]>(`${this.apiUrl}/scrobbles/by_user/?username=${username}`);
+  }
+
+  getArtistByName(name: string | null): Observable<IArtist> {
+    return this.httpClient.get<IArtist>(`${this.apiUrl}/artists/get_by/?name=${name}`);
+  }
+
+  getArtistScrobbleCount(id: number): Observable<ICount> {
+    return this.httpClient.get<ICount>(`${this.apiUrl}/artists/${id}/count/`);
+  }
+
+  getArtistsRecentScrobbles(id: number): Observable<IScrobble[]> {
+    return this.httpClient.get<IScrobble[]>(`${this.apiUrl}/artists/${id}/recent_listens/?count=6`);
   }
 }

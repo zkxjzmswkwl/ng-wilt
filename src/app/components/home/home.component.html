@@ -3,7 +3,7 @@
     <div class="grid-item new-inserts">
 
         <div *ngFor="let scrobble of recentScrobbles" class="scrobble-small">
-            <div class="scrobble-small-text">{{scrobble.song | slice:0:30}}...</div>
+            <app-small-scrobble [scrobbleData]="scrobble"></app-small-scrobble>
         </div>
 
     </div>

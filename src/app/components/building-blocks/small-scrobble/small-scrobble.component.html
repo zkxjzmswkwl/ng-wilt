@@ -1,0 +1,9 @@
+<div class="small-scrobble">
+    <div class="left">
+        <img src="http://localhost:6969{{scrobbleData?.art}}" class="album-cover">
+    </div>
+    
+    <div class="right">
+        <p><span *ngIf="!songOnly">{{scrobbleData?.artist}} - </span>{{scrobbleData?.song}}</p>
+    </div>
+</div>

@@ -6,7 +6,8 @@ import { CookieService } from 'ngx-cookie-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfileComponent, LoginComponent, RegisterComponent, HeaderComponent, HomeComponent } from './components';
+import { ProfileComponent, LoginComponent, RegisterComponent, HeaderComponent, HomeComponent, SmallScrobbleComponent  } from './components';
+import { ArtistProfileComponent } from './components/artistprofile/artistprofile.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { ProfileComponent, LoginComponent, RegisterComponent, HeaderComponent, H
     RegisterComponent,
     HeaderComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    SmallScrobbleComponent,
+    ArtistProfileComponent
   ],
   imports: [
     BrowserModule,
