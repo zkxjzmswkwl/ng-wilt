@@ -4,7 +4,7 @@ This frontend interfaces with [this backend](https://github.com/zkxjzmswkwl/djan
 
 ### Registration page
 
-![registration](https://i.imgur.com/BlWSs7G.png)
+![registration](https://i.imgur.com/Oc15mlp.png)
 
 ### WIP homepage. Not sure what to do here yet.
 ![wiphomepage](https://i.imgur.com/MtyxvL4.png)
