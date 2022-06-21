@@ -1,5 +1,4 @@
-<div class="home-grid">
-    <!-- Left, tall -->
+<!-- <div class="home-grid">
     <div class="grid-item new-inserts">
 
         <div *ngFor="let scrobble of recentScrobbles" class="scrobble-small">
@@ -8,15 +7,29 @@
 
     </div>
 
-    <!-- Center, tall, wide -->
     <div *ngIf="recentUpdate" class="grid-item feed">
         <h3>{{recentUpdate.title}}</h3>
         
         <div class="update-rendered" [innerHTML]="recentUpdate.markdown_rendered"></div>
     </div>
 
-    <!-- Right, tall -->
     <div class="grid-item repo-updates">
         <h2>Recent Commits</h2>
+    </div>
+</div> -->
+
+<div class="container w-9/12 mx-auto">
+
+    <div *ngIf="recentScrobbles" class="grid grid-cols-4 gap-4">
+        <div id="bg" *ngFor="let s of recentScrobbles">
+            <div class="bg-stone-900 rounded-md">
+                <div class="px-4 py-4"></div>
+                <h2 class="text-stone-600 tracking-widest text-xs mb-1">{{s.belongs_to}} listened to..</h2>
+                <h1 class="text-stone-500 title-font text-lg text-silver">{{s.song}}</h1>
+                <h2 class="text-stone-600 tracking-widest text-xs">by..</h2>
+                <h1 class="text-stone-500 title-font text-lg text-silver mb-1">{{s.artist}}</h1>
+                <!-- <button class="bg-red-500 text-sm text-white rounded-md px-4 py-1">Click Me</button> -->
+            </div>
+        </div>
     </div>
 </div>

@@ -2,6 +2,15 @@
 
 This frontend interfaces with [this backend](https://github.com/zkxjzmswkwl/django-wilt)
 
+### Registration page
+
+![registration](https://i.imgur.com/BlWSs7G.png)
+
+### WIP homepage. Not sure what to do here yet.
+![wiphomepage](https://i.imgur.com/MtyxvL4.png)
+
+### WIP artist page.
+![wipartistpage](https://i.imgur.com/lZG3Meh.png)
 
 
 # Auto-gen'd readme below

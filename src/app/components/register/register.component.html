@@ -1,1 +1,24 @@
-<p>register works!</p>
+<div class="container w-9/12 mx-auto">
+    <div class="grid grid-cols-2 gap-8">
+        
+        <div class="rounded-md">
+            <div class="bg-stone-900 rounded-md px-4 py-4">
+                <h2 class="text-stone-600 tracking-widest text-xs mb-1">Scrobbling...</h2>
+                <h1 class="text-stone-500 title-font text-lg text-silver mb-3">Supported Services</h1>
+                <p class="leading-relaxed text-sm mb-3">
+                    For your listening to be tracked, there's at least one more step to go. For Spotify, head over to <a [routerLink]="['spotify']">Spotify Connect</a>, press "Connect", and you're good to go.
+
+                    For MusicBee, you'll need to go to <a target="_blank" href="https://github.com/zkxjzmswkwl/musicbee-scrobbler">MusicBee Scrobbler</a> and grab the plugin.
+                </p>
+                <button class="bg-red-500 text-sm text-white rounded-md px-4 py-1">Click Me</button>
+            </div>
+        </div>
+
+        <div class="rounded-md flex flex-col">
+            <input type="text" class="mb-5 rounded-md p-2" placeholder="Username">
+            <input type="text" class="mb-5 rounded-md p-2" placeholder="Password">
+            <input type="text" class="mb-5 rounded-md p-2" placeholder="Confirm Password">
+            <button class="rounded-md bg-red-500 p-2">Register</button>
+        </div>
+    </div>
+</div>
