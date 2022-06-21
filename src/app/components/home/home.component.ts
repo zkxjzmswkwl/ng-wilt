@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IScrobble } from 'src/app/models';
+import { IScrobble, IUpdate } from 'src/app/models';
 import { ApiService } from 'src/app/services';
 
 @Component({
@@ -9,15 +9,22 @@ import { ApiService } from 'src/app/services';
 })
 export class HomeComponent implements OnInit {
   recentScrobbles!: IScrobble[];
+  recentUpdate!: IUpdate;
 
   constructor(private api: ApiService) {}
-  ngOnInit(): void {
-    this.fuckDudes();
-  }
 
-  fuckDudes() {
-   this.api.getXRecentScrobbles(30).subscribe((r: IScrobble[]) => {
-     this.recentScrobbles = r;
-   });
+  ngOnInit(): void {
+
+   this.api.getXRecentScrobbles(30).subscribe(
+     (r: IScrobble[]) => {
+       this.recentScrobbles = r;
+      },
+      (err: any) => alert(err)
+    );
+
+    this.api.getUpdate(2).subscribe(
+      (r: IUpdate) => this.recentUpdate = r
+    );
+
   }
 }

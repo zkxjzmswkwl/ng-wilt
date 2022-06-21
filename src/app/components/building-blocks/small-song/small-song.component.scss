@@ -1,0 +1,17 @@
+.small-song {
+    display: grid;
+    grid-template-areas: "left listencount right";
+    grid-template-columns: 1fr 1fr 4fr;
+}
+
+.left {
+    grid-area: left;
+}
+
+.listen-count {
+    grid-area: listencount;
+}
+
+.right {
+    grid-area: right;
+}

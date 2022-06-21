@@ -1,9 +1,15 @@
-<div class="small-scrobble">
+<div *ngIf="scrobbleData" class="small-scrobble">
     <div class="left">
         <img src="http://localhost:6969{{scrobbleData?.art}}" class="album-cover">
     </div>
     
     <div class="right">
-        <p><span *ngIf="!songOnly">{{scrobbleData?.artist}} - </span>{{scrobbleData?.song}}</p>
+        <p>
+            <span [routerLink]="['artist', scrobbleData?.artist]" *ngIf="!songOnly">
+                {{scrobbleData?.artist}} - 
+            </span>
+
+            {{ (scrobbleData.song.length > 14) ? (scrobbleData.song | slice:0:14)+'...':(scrobbleData.song)}}
+        </p>
     </div>
 </div>

@@ -1,0 +1,16 @@
+<div class="small-song">
+    <div class="left">
+        <img src="http://localhost:6969{{songData?.art}}" class="album-cover">
+    </div>
+
+    <div class="listen-count"><p>{{songData.listen_count | number}}</p></div>
+    
+    <div class="right">
+        <p>
+            <span [routerLink]="['artist', songData.artist]" *ngIf="!songOnly">
+                {{songData.artist}} - 
+            </span>
+            {{ (songData.title.length > 30) ? (songData.title | slice:0:30)+'...':(songData.title)}}
+        </p>
+    </div>
+</div>

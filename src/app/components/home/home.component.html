@@ -9,12 +9,14 @@
     </div>
 
     <!-- Center, tall, wide -->
-    <div class="grid-item feed">
-        <p>I am gay</p>
+    <div *ngIf="recentUpdate" class="grid-item feed">
+        <h3>{{recentUpdate.title}}</h3>
+        
+        <div class="update-rendered" [innerHTML]="recentUpdate.markdown_rendered"></div>
     </div>
 
     <!-- Right, tall -->
     <div class="grid-item repo-updates">
-        <p>I am gay</p>
+        <h2>Recent Commits</h2>
     </div>
 </div>

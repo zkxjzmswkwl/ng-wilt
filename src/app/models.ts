@@ -18,7 +18,13 @@ export interface IArtist {
 export interface ISong {
     id: number;
     title: string;
-    about: string;
+    year?: string;
+    about?: string;
+    listen_count: number;
+    creation_timestamp: string;
+    album?: any;
+    art?: string;
+    artist: string;
 }
 
 export interface IScrobble {
@@ -36,4 +42,12 @@ export interface IToken {
 
 export interface ICount {
     count: number;
+}
+
+export interface IUpdate {
+    id: number;
+    title: string;
+    timestamp: string;
+    markdown: string;
+    markdown_rendered: string;
 }

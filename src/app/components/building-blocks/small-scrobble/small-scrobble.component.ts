@@ -7,7 +7,7 @@ import { IScrobble } from '../../../models';
   styleUrls: ['./small-scrobble.component.scss']
 })
 export class SmallScrobbleComponent implements OnInit {
-  @Input() scrobbleData?: IScrobble;
+  @Input() scrobbleData!: IScrobble;
   @Input() songOnly: boolean = false;
 
   constructor() { }

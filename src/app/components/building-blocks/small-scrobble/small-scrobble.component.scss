@@ -1,4 +1,13 @@
 .small-scrobble {
     display: grid;
-    grid-template-areas: "thumb title";
+    grid-template-areas: "left right";
+    grid-template-columns: 1fr 4fr;
+}
+
+.left {
+    grid-area: left;
+}
+
+.right {
+    grid-area: right;
 }

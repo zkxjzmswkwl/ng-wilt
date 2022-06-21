@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable } from 'rxjs/internal/Observable';
-import { IArtist, ICount, IScrobble, IToken } from 'src/app/models';
+import { IArtist, ICount, IScrobble, ISong, IToken, IUpdate } from 'src/app/models';
 
 @Injectable({
   providedIn: 'root'
@@ -42,5 +42,13 @@ export class ApiService {
 
   getArtistsRecentScrobbles(id: number): Observable<IScrobble[]> {
     return this.httpClient.get<IScrobble[]>(`${this.apiUrl}/artists/${id}/recent_listens/?count=6`);
+  }
+
+  getArtistsTopSongs(id: number): Observable<ISong[]> {
+    return this.httpClient.get<ISong[]>(`${this.apiUrl}/artists/${id}/get_top_songs/?count=5`);
+  }
+
+  getUpdate(id: number): Observable<IUpdate> {
+    return this.httpClient.get<IUpdate>(`${this.apiUrl}/updates/${id}/`);
   }
 }

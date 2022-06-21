@@ -1,21 +1,28 @@
 <div class="artist-profile">
-    <div class="artist-profile-header">
+    <div *ngIf="artist" class="artist-profile-header">
 
         <div class="a-picture a-grid-item">
             <img class="artist-cover" src="http://localhost:6969{{artist.pic}}">
         </div>
 
-        <div class="a-grid-item a-name">
-            <h4>{{artist.title}}</h4>
+        <div *ngIf="scrobbleCount" class="a-grid-item a-name">
+            <h3>{{artist.title}}</h3>
             <p>Scrobble count: {{scrobbleCount.count | number}}</p>
             <p>First scrobbled: {{artist.creation_timestamp | date}}</p>
         </div>
 
-        <div class="a-grid-item a-recents">
-            <div *ngFor="let s of recentScrobbles">
-                <app-small-scrobble [scrobbleData]="s" [songOnly]="true"></app-small-scrobble>
+        <div class="a-grid-item a-top-songs">
+            <h4>Top Songs</h4>
+            <div *ngFor="let s of topSongs">
+                <app-small-song [songData]="s" [songOnly]="true"></app-small-song>
             </div>
         </div>
+    </div>
 
+    <div class="recent-scrobbles">
+        <h4>Recent Listens</h4>
+        <div *ngFor="let scrobble of recentScrobbles">
+            <app-small-scrobble [scrobbleData]="scrobble" [songOnly]="true"></app-small-scrobble>
+        </div>
     </div>
 </div>
